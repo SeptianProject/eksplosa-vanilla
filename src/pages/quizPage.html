@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Eksplosa | Quiz</title>
+     <link rel="stylesheet" href="/src/index.css">
+     <script type="module" src="/src/js/main.js"></script>
+     <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+     <script src="https://cdn.tailwindcss.com"></script>
+     <script>
+          tailwind.config = {
+               theme: {
+                    screens: {
+                         xs: '440px',
+                         md: '768px',
+                         lg: '1024px',
+                         xl: '1280px',
+                    },
+                    extend: {
+                         fontFamily: {
+                              'epilogue': ['Epilogue', 'sans-serif'],
+                              'poppins': ['Poppins', 'sans-serif'],
+                         },
+                         colors: {
+                              'primary': '#43766C',
+                              'secondary': '#08A081',
+                              'blueAccent': '#E9FBF5',
+                              'blackText': '#2A2A30',
+                              'darkText': '#1E1E1E',
+                              'danger': '#C42B23',
+                              'graySurface': '#7B7B7B',
+                         },
+                    }
+               }
+          }
+     </script>
+</head>
+
+<body>
+     <section class="relative lg:min-h-screen">
+          <!-- Xbutton -->
+          <button id="closeButton" class="absolute top-10 left-20 bg-primary/30 text-primary 
+          rounded-md px-3 py-1 flex items-center justify-center hover:bg-primary/30 
+          transition-colors duration-300">
+               <i class="fa-solid fa-xmark text-3xl"></i>
+          </button>
+          <div class="flex items-center">
+               <!-- Quiz question -->
+               <main class="w-full px-20">
+                    <div class="text-center space-y-2">
+                         <p id="level" class='font-medium text-darkText/80'>
+                              #Bagian 1A - Percakapan sehari hari
+                         </p>
+                         <h1 class='text-4xl font-bold'>Aku sedang makan</h1>
+                    </div>
+                    <div class="border-y mt-20 min-h-[10rem] flex items-center justify-center border-primary">
+                         <!-- Answer -->
+                         <div class="flex flex-wrap gap-2 items-center justify-center max-w-2xl">
+                              <button class="bg-primary text-white w-32 py-4 rounded-md font-semibold">
+                                   Aku
+                              </button>
+                              <button class="bg-primary text-white w-32 py-4 rounded-md font-semibold">
+                                   lagi
+                              </button>
+                              <button class="bg-primary text-white w-32 py-4 rounded-md font-semibold">
+                                   nedha
+                              </button>
+                         </div>
+                    </div>
+                    <div class="flex items-center justify-center mt-12">
+                         <!-- Answer Options -->
+                         <div class="flex flex-wrap items-center justify-center gap-4">
+                              <button class="bg-primary/20 hover:bg-primary/30 text-primary 
+                                   px-10 py-5 rounded-md font-semibold font-poppins transition-colors duration-300">
+                                   nedha
+                              </button>
+                              <button class="bg-primary/20 hover:bg-primary/30 text-primary 
+                                   px-10 py-5 rounded-md font-semibold font-poppins transition-colors duration-300">
+                                   iya
+                              </button>
+                              <button class="bg-primary/20 hover:bg-primary/30 text-primary 
+                                   px-10 py-5 rounded-md font-semibold font-poppins transition-colors duration-300">
+                                   lagi
+                              </button>
+                              <button class="bg-primary/20 hover:bg-primary/30 text-primary 
+                                   px-10 py-5 rounded-md font-semibold font-poppins transition-colors duration-300">
+                                   Aku
+                              </button>
+                         </div>
+                    </div>
+               </main>
+               <!-- Sidebar -->
+               <div class="w-1/3 border-l-8 h-full px-5 min-h-screen space-y-10 pt-20">
+                    <div class="text-center space-y-0">
+                         <h1 class="text-3xl font-bold">Level Belajar</h1>
+                         <p class="font-medium text-sm text-darkText/80">
+                              Tingkatkan Skill-mu di Setiap Level!
+                         </p>
+                    </div>
+                    <!-- Level button -->
+                    <div class="flex flex-col gap-y-5">
+                         <div class="flex items-center gap-x-2 w-fit cursor-pointer">
+                              <h5 class="bg-primary rounded-full size-11 text-white text-sm font-semibold 
+                              flex items-center justify-center">
+                                   1
+                              </h5>
+                              <h5 class="text-sm font-semibold max-w-[12rem]">
+                                   Bagian 1A - Percakapan sehari hari
+                              </h5>
+                         </div>
+                         <div class="flex items-center gap-x-2 w-fit cursor-pointer">
+                              <h5 class="bg-graySurface rounded-full size-11 text-white text-sm font-semibold 
+                              flex items-center justify-center">
+                                   1
+                              </h5>
+                              <h5 class="text-sm font-semibold max-w-[12rem]">
+                                   Bagian 1A - Percakapan sehari hari
+                              </h5>
+                         </div>
+                         <div class="flex items-center gap-x-2 w-fit cursor-pointer">
+                              <h5 class="bg-graySurface rounded-full size-11 text-white text-sm font-semibold 
+                              flex items-center justify-center">
+                                   1
+                              </h5>
+                              <h5 class="text-sm font-semibold max-w-[12rem]">
+                                   Bagian 1A - Percakapan sehari hari
+                              </h5>
+                         </div>
+                         <div class="flex items-center gap-x-2 w-fit cursor-pointer">
+                              <h5 class="bg-graySurface rounded-full size-11 text-white text-sm font-semibold 
+                              flex items-center justify-center">
+                                   1
+                              </h5>
+                              <h5 class="text-sm font-semibold max-w-[12rem]">
+                                   Bagian 1A - Percakapan sehari hari
+                              </h5>
+                         </div>
+                    </div>
+                    <!-- Level switch page -->
+                    <div class="border-t border-primary">
+                         <div class="flex items-center justify-center gap-x-2 pt-3">
+                              <button class="bg-blueAccent size-10 text-primary rounded-md p-1 flex items-center 
+                         justify-center hover:bg-primary/30 transition-colors duration-300">
+                                   1
+                              </button>
+                              <button class="bg-blueAccent size-10 text-primary rounded-md p-1 flex items-center 
+                         justify-center hover:bg-primary/30 transition-colors duration-300">
+                                   2
+                              </button>
+                              <button class="bg-blueAccent size-10 text-primary rounded-md p-1 flex items-center 
+                         justify-center hover:bg-primary/30 transition-colors duration-300">
+                                   3
+                              </button>
+                              <button class="bg-blueAccent size-10 text-primary rounded-md p-1 flex items-center 
+                         justify-center hover:bg-primary/30 transition-colors duration-300">
+                                   4
+                              </button>
+                              <button class="bg-blueAccent size-10 text-primary rounded-md p-1 flex items-center 
+                         justify-center hover:bg-primary/30 transition-colors duration-300">
+                                   5
+                              </button>
+                         </div>
+                    </div>
+               </div>
+     </section>
+     <div class="fixed inset-0 bg-black/60 transition-all duration-300 z-50" />
+     <div class="fixed w-full py-10 bg-white top-1/2 left-1/2 transform 
+          -translate-y-1/2 -translate-x-1/2 rounded-2xl md:h-[28rem] md:w-[38rem] md:py-2 
+          transition-all duration-300 ease-in-out scale-90 md:scale-100 z-50">
+          <div class="flex flex-col items-center justify-center px-5 gap-y-3 md:px-10">
+               <img src="/assets/images/emote/successEmote.png" alt="" class="w-52 md:w-64">
+               <div class="text-center space-y-2">
+                    <h1 class="text-2xl md:text-3xl font-bold">Wah Selamat!</h1>
+                    <p class="text-sm text-textDark/80 font-medium">
+                         Kamu telah menyelesaikan level ini dengan sangat baik,
+                         Gaca ikut bangga sama kamu, terus belajar di level selanjutnya ya!
+                    </p>
+               </div>
+               <div class="flex items-center justify-center gap-x-4 pt-5">
+                    <button class="text-white flex justify-center bg-danger rounded-md 
+                         w-40 py-2 text-sm xs:text-base">
+                         Keluar
+                    </button>
+                    <button class="text-white flex justify-center bg-primary rounded-md 
+                         w-40 py-2 text-sm xs:text-base">
+                         Baiklah
+                    </button>
+               </div>
+          </div>
+     </div>
+</body>
+
+</html>
