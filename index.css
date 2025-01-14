@@ -119,6 +119,18 @@ p {
 .staggered:nth-child(4) {
   animation-delay: 0.6s;
 }
+.staggered:nth-child(5) {
+  animation-delay: 0.8s;
+}
+.staggered:nth-child(6) {
+  animation-delay: 1s;
+}
+.staggered:nth-child(7) {
+  animation-delay: 1.2s;
+}
+.staggered:nth-child(8) {
+  animation-delay: 1.4s;
+}
 
 @keyframes stagger {
   0% {
