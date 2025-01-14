@@ -6,7 +6,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Eksplosa</title>
      <link rel="stylesheet" href="index.css">
-     <script type="module" src="lib/main.js"></script>
+     <script type="module" src="main.js"></script>
      <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
           rel="stylesheet">
      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -62,22 +62,22 @@
                     transition-all duration-500 ease-in-out md:flex-row md:bg-transparent 
                     md:gap-x-10 md:w-auto md:translate-y-0">
                     <ul class="flex flex-col items-center w-full md:flex-row md:gap-x-10 md:w-auto">
-                         <a href="/"
-                              class="text-[#2D2D2D] font-semibold w-full text-center border-t border-primary py-4 text-sm font-poppins md:border-none md:py-0 md:w-auto">
+                         <li data-target="#beranda"
+                              class="text-[#2D2D2D] cursor-pointer font-semibold w-full text-center border-t border-primary py-4 text-sm font-poppins md:border-none md:py-0 md:w-auto">
                               Beranda
-                         </a>
-                         <a href="#tentang-kami"
-                              class="text-[#2D2D2D] font-semibold w-full text-center border-t border-primary py-4 text-sm font-poppins md:border-none md:py-0 md:w-auto">
+                         </li>
+                         <li data-target="#tentang-kami"
+                              class="text-[#2D2D2D] cursor-pointer font-semibold w-full text-center border-t border-primary py-4 text-sm font-poppins md:border-none md:py-0 md:w-auto">
                               Tentang Kami
-                         </a>
-                         <a href="pages/mapPage.html"
-                              class="text-[#2D2D2D] font-semibold w-full text-center border-t border-primary py-4 text-sm font-poppins md:border-none md:py-0 md:w-auto">
+                         </li>
+                         <li data-target="mapPage"
+                              class="text-[#2D2D2D] cursor-pointer font-semibold w-full text-center border-t border-primary py-4 text-sm font-poppins md:border-none md:py-0 md:w-auto">
                               Peta
-                         </a>
-                         <a href="pages/quizPage.html"
-                              class="text-[#2D2D2D] font-semibold w-full text-center border-t border-primary py-4 text-sm font-poppins md:border-none md:py-0 md:w-auto">
+                         </li>
+                         <li data-target="quizPage"
+                              class="text-[#2D2D2D] cursor-pointer font-semibold w-full text-center border-t border-primary py-4 text-sm font-poppins md:border-none md:py-0 md:w-auto">
                               Quiz
-                         </a>
+                         </li>
                     </ul>
                     <button data-login-button
                          class="text-white bg-primary rounded-lg py-2 px-6  w-full py-4 rounded-2xl md:w-auto md:px-8 md:py-[10px] md:rounded-lg">
@@ -86,37 +86,38 @@
                </div>
           </div>
      </nav>
-     <section class="overflow-hidden py-32 md:py-48">
+     <section id="beranda" class="overflow-hidden py-32 md:py-48">
           <!-- Hero -->
           <div class="relative min-h-[28rem] xs:min-h-[32rem] lg:min-h-[150vh]">
                <div class="px-6 md:pl-14 md:max-w-[55rem] space-y-3 md:space-y-5">
-                    <h1 class="text-xl xs:text-2xl md:text-4xl lg:text-5xl tracking-wide 
+                    <h1 class="animate fadeToRight text-xl xs:text-2xl md:text-4xl lg:text-5xl tracking-wide 
                     leading-[1.20] font-medium">
                          Utamakan Bahasa Indonesia, Kuasai Bahasa Asing, Lestarikan
-                         <span class="font-bold">Bahasa Daerah.</span>
+                         <span class="font-bold fadeIn">Bahasa Daerah.</span>
                     </h1>
-                    <p class="tracking-wide text-[10px] xs:text-[12px] md:text-base pb-2">
+                    <p class="animate fadeToBottom tracking-wide text-[10px] xs:text-[12px] md:text-base pb-2">
                          Setiap kata yang kita pelihara adalah langkah kecil untuk melestarikan kebudayaan yang kaya.
                          Setiap bahasa yang kita
                          jaga, adalah kekuatan untuk masa depan yang lebih harmonis dan penuh penghargaan.
                     </p>
-                    <button class="text-white flex items-center bg-primary w-fit 
+                    <button class="animate fadeToTop text-white flex items-center bg-primary w-fit 
                     pl-6 pr-2 py-3 rounded-lg text-sm xs:text-base xs:pl-8 xs:pr-4">
                          Jelajahi Sekarang <i class="fa-solid fa-arrow-right-long pl-4 pr-2 md:pr-4"></i>
                     </button>
                </div>
                <img src='assets/images/heroImage.png' alt="HeroImage"
-                    class="object-cover absolute bottom-0 lg:-top-20 pointer-events-none" />
+                    class="object-cover absolute bottom-0 lg:bottom-32 pointer-events-none" />
           </div>
           <!-- About -->
-          <div id="tentang-kami" class="mt-16 lg:min-h-screen lg:px-40">
-               <div class="flex flex-col relative items-center justify-center gap-y-12">
-                    <h2 class="text-lg xs:text-xl md:text-3xl max-w-md font-medium text-center z-10 px-6 md:px-0">
+          <div id="tentang-kami" class="pt-24 lg:min-h-screen lg:px-40">
+               <div class="flex flex-col relative items-center justify-center gap-y-14">
+                    <h2 class="staggered text-lg xs:text-xl md:text-3xl max-w-md 
+                         font-medium text-center z-10 px-6 md:px-0">
                          Kenapa kamu harus memilih <span class="font-bold">Eksplosa?</span>
                     </h2>
                     <!-- Cards Information -->
                     <div class="grid grid-cols-1 px-6 md:px-0 md:grid-cols-2 gap-x-5 gap-y-6 md:gap-y-10 z-10 w-full">
-                         <div class='relative bg-white !border-[0.2px] border-graySurface/50 
+                         <div class='staggered relative bg-white border-[0.2px] border-graySurface/50 
                          w-full h-auto rounded-3xl shadow-md overflow-hidden px-8 pt-8 pb-10 
                          xs:px-10 xs:pb-12 md:h-80 md:py-12 '>
                               <div class='space-y-2 md:space-y-3'>
@@ -142,7 +143,7 @@
                               <img src='assets/images/batik/batikBlue.png' alt="batikBlue"
                                    class='absolute -right-10 -bottom-10 size-40 object-contain' />
                          </div>
-                         <div class='relative bg-white !border-[0.2px] border-graySurface/50 
+                         <div class='staggered relative bg-white border-[0.2px] border-graySurface/50 
                          w-full h-auto rounded-3xl shadow-md overflow-hidden px-8 pt-8 pb-10 
                          xs:px-10 xs:pb-12 md:h-80 md:py-12 '>
                               <div class='space-y-2 md:space-y-3'>
@@ -169,7 +170,7 @@
                               <img src='assets/images/batik/batikBlue.png' alt="batikBlue"
                                    class='absolute -right-10 -bottom-10 size-40 object-contain' />
                          </div>
-                         <div class='relative bg-white !border-[0.2px] border-graySurface/50 
+                         <div class='staggered relative bg-white border-[0.2px] border-graySurface/50 
                          w-full h-auto rounded-3xl shadow-md overflow-hidden px-8 pt-8 pb-10 
                          xs:px-10 xs:pb-12 md:h-80 md:py-12 '>
                               <div class='space-y-2 md:space-y-3'>
@@ -197,7 +198,7 @@
                               <img src='assets/images/batik/batikBlue.png' alt="batikBlue"
                                    class='absolute -right-10 -bottom-10 size-40 object-contain' />
                          </div>
-                         <div class='relative bg-white !border-[0.2px] border-graySurface/50 
+                         <div class='staggered relative bg-white border-[0.2px] border-graySurface/50 
                               w-full h-auto rounded-3xl shadow-md overflow-hidden px-8 pt-8 
                               pb-10 xs:px-10 xs:pb-12 md:h-80 md:py-12 '>
                               <div class='space-y-2 md:space-y-3'>
@@ -243,7 +244,7 @@
                     <div class="carousel-container w-full">
                          <div class="carousel-wrapper w-full">
                               <div class="carousel-slides items-center justify-start">
-                                   <div class="carousel-slide bg-white rounded-tr-2xl rounded-b-2xl 
+                                   <div class="staggered carousel-slide bg-white rounded-tr-2xl rounded-b-2xl 
                                    w-full pt-2 pb-6 md:h-60 shadow-xl md:shadow-black/30">
                                         <img src="assets/images/languages/jawa.png" alt=""
                                              class="object-cover object-center pointer-events-none select-none">
@@ -256,7 +257,7 @@
                                              <h3 class="text-secondary font-medium text-sm">Bahasa Jawa</h3>
                                         </div>
                                    </div>
-                                   <div class="carousel-slide bg-white rounded-tr-2xl rounded-b-2xl 
+                                   <div class="staggered carousel-slide bg-white rounded-tr-2xl rounded-b-2xl 
                                    w-full pt-2 pb-6 md:h-60 shadow-xl md:shadow-black/30">
                                         <img src="assets/images/languages/madura.png" alt=""
                                              class="object-cover object-center pointer-events-none select-none">
@@ -269,7 +270,7 @@
                                              <h3 class="text-secondary font-medium text-sm">Bahasa Madura</h3>
                                         </div>
                                    </div>
-                                   <div class="carousel-slide bg-white rounded-tr-2xl rounded-b-2xl
+                                   <div class="staggered carousel-slide bg-white rounded-tr-2xl rounded-b-2xl
                                    w-full pt-2 pb-6 md:h-60 shadow-xl md:shadow-black/30">
                                         <img src="assets/images/languages/sunda.png" alt=""
                                              class="object-cover object-center pointer-events-none select-none">
@@ -282,7 +283,7 @@
                                              <h3 class="text-secondary font-medium text-sm">Bahasa Sunda</h3>
                                         </div>
                                    </div>
-                                   <div class="carousel-slide bg-white rounded-tr-2xl rounded-b-2xl
+                                   <div class="staggered carousel-slide bg-white rounded-tr-2xl rounded-b-2xl
                                    w-full pt-2 pb-6 md:h-60 shadow-xl md:shadow-black/30">
                                         <img src="assets/images/languages/bali.png" alt=""
                                              class="object-cover object-center pointer-events-none select-none">
@@ -295,7 +296,7 @@
                                              <h3 class="text-secondary font-medium text-sm">Bahasa Bali</h3>
                                         </div>
                                    </div>
-                                   <div class="carousel-slide bg-white rounded-tr-2xl rounded-b-2xl
+                                   <div class="staggered carousel-slide bg-white rounded-tr-2xl rounded-b-2xl
                                    w-full pt-2 pb-6 md:h-60 shadow-xl md:shadow-black/30">
                                         <img src="assets/images/languages/sumatera.png" alt=""
                                              class="object-cover object-center pointer-events-none select-none">
