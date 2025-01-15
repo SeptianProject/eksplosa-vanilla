@@ -40,7 +40,7 @@
      </script>
 </head>
 
-<body>
+<body id="detailPage">
      <section class="relative lg:min-h-screen pb-20">
           <!-- Xbutton -->
           <button id="closeButton" class="absolute top-10 left-20 bg-primary/30 text-primary 
@@ -58,10 +58,12 @@
                          </p>
                     </div>
                     <div class="grid grid-cols-4 gap-5">
-                         <button class="bg-primary py-7 w-72 text-white text-lg font-medium font-poppins rounded-xl">
+                         <button data-target="quizPage"
+                              class="bg-primary py-7 w-72 text-white text-lg font-medium font-poppins rounded-xl">
                               Bahasa Aceh
                          </button>
-                         <button class="bg-primary py-7 w-72 text-white text-lg font-medium font-poppins rounded-xl">
+                         <button data-target="quizPage"
+                              class="bg-primary py-7 w-72 text-white text-lg font-medium font-poppins rounded-xl">
                               Bahasa Gayo
                          </button>
                          <button

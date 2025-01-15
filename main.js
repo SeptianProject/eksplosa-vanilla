@@ -4,6 +4,7 @@ import { ModalManagement } from "./lib/modalManagement.js"
 import { QuizManagement } from "./lib/quizManagement.js"
 import { AnimationController } from "./lib/animation.js"
 import { Loader } from "./lib/loader.js"
+import { OrientationHandler } from "./lib/orientationHandler.js"
 
 document.addEventListener('DOMContentLoaded', () => {
      const modalManagement = new ModalManagement()
@@ -15,8 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
      async function initalizeApp() {
           await loader.simulatedLoading()
-
           new NavbarController()
+
           setTimeout(() => {
                animationController = new AnimationController()
                animationController.init()
@@ -28,7 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
                          mobile: 2,
                          desktop: 5
                     },
-                    slideGap: 25,
+                    slideGap: {
+                         mobile: 25,
+                         desktop: 10
+                    },
                     transitionDuration: 300
                })
           }
@@ -38,9 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }
 
           if (closeButton) {
-               closeButton.addEventListener('click', () => {
-                    window.history.back()
-               })
+               closeButton.addEventListener('click', () => window.history.back())
           }
 
           if (window.location.pathname.includes('map')) {

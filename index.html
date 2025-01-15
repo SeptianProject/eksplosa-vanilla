@@ -16,6 +16,7 @@
                theme: {
                     screens: {
                          xs: '440px',
+                         sm: '640px',
                          md: '768px',
                          lg: '1024px',
                          xl: '1280px',
@@ -40,15 +41,16 @@
      </script>
 </head>
 
-<body>
+<body id="beranda">
+     <!-- navbar -->
      <nav id="navbar" class="fixed top-0 h-20 w-full bg-white z-40 transition-all duration-300">
           <div class="flex flex-col items-center gap-y-0 md:flex-row md:justify-between md:px-14 md:py-4">
-               <div class="flex items-center justify-between w-full px-6 py-4 z-10 
-                    bg-white md:p-0 md:w-auto md:bg-transparent">
+               <div class="flex items-center justify-between w-full pl-5 pr-10 py-4 z-10 bg-white 
+               sm:pl-10 sm:pr-14 md:p-0 md:w-auto md:bg-transparent">
                     <!-- Logo -->
                     <img src="assets/images/logo.png" alt="Logo" class="scale-90 z-50">
                     <!-- Hamburger menu -->
-                    <button id="hamburger-button" class="lg:hidden w-6 z-50 space-y-1">
+                    <button id="hamburger-button" class="md:hidden w-6 z-50 space-y-1">
                          <div id="hamburger-1" class="w-6 h-[3px] bg-primary rounded-full transition-all duration-500">
                          </div>
                          <div id="hamburger-2" class="w-6 h-[3px] bg-primary rounded-full transition-all duration-500">
@@ -74,52 +76,55 @@
                               class="text-[#2D2D2D] cursor-pointer font-semibold w-full text-center border-t border-primary py-4 text-sm font-poppins md:border-none md:py-0 md:w-auto">
                               Peta
                          </li>
-                         <li data-target="quizPage"
+                         <li data-target="provincePage"
                               class="text-[#2D2D2D] cursor-pointer font-semibold w-full text-center border-t border-primary py-4 text-sm font-poppins md:border-none md:py-0 md:w-auto">
                               Quiz
                          </li>
                     </ul>
                     <button data-login-button
-                         class="text-white bg-primary rounded-lg py-2 px-6  w-full py-4 rounded-2xl md:w-auto md:px-8 md:py-[10px] md:rounded-lg">
+                         class="text-white bg-primary rounded-lg py-2 px-5  w-full py-4 rounded-2xl md:w-auto md:px-8 md:py-[10px] md:rounded-lg">
                          Masuk
                     </button>
                </div>
           </div>
      </nav>
-     <section id="beranda" class="overflow-hidden py-32 md:py-48">
+     <section id="beranda" class="overflow-hidden py-32 md:py-40">
           <!-- Hero -->
-          <div class="relative min-h-[28rem] xs:min-h-[32rem] lg:min-h-[150vh]">
-               <div class="px-6 md:pl-14 md:max-w-[55rem] space-y-3 md:space-y-5">
-                    <h1 class="animate fadeToRight text-xl xs:text-2xl md:text-4xl lg:text-5xl tracking-wide 
-                    leading-[1.20] font-medium">
+          <div class="relative min-h-[25rem] xs:min-h-[30rem] sm:min-h-[34rem] 
+          md:min-h-[38rem] lg:min-h-[45rem] xl:min-h-[55rem]">
+               <div class="px-5 sm:pl-10 md:pl-14 sm:max-w-[36rem] md:max-w-[43rem] 
+                    lg:max-w-[45rem] xl:max-w-[55rem] space-y-3 md:space-y-5 w-full">
+                    <h1 class="animate fadeToRight text-xl tracking-wide leading-[1.20] font-medium 
+                    xs:text-2xl sm:text-3xl md:text-4xl xl:text-5xl">
                          Utamakan Bahasa Indonesia, Kuasai Bahasa Asing, Lestarikan
                          <span class="font-bold fadeIn">Bahasa Daerah.</span>
                     </h1>
-                    <p class="animate fadeToBottom tracking-wide text-[10px] xs:text-[12px] md:text-base pb-2">
+                    <p class="animate fadeToBottom tracking-wide text-[10.5px] 
+                         xs:text-[12.5px] md:text-[14px] lg:text-base pb-2">
                          Setiap kata yang kita pelihara adalah langkah kecil untuk melestarikan kebudayaan yang kaya.
                          Setiap bahasa yang kita
                          jaga, adalah kekuatan untuk masa depan yang lebih harmonis dan penuh penghargaan.
                     </p>
-                    <button class="animate fadeToTop text-white flex items-center bg-primary w-fit 
+                    <button data-target="provincePage" class="animate fadeToTop text-white flex items-center bg-primary w-fit 
                     pl-6 pr-2 py-3 rounded-lg text-sm xs:text-base xs:pl-8 xs:pr-4">
                          Jelajahi Sekarang <i class="fa-solid fa-arrow-right-long pl-4 pr-2 md:pr-4"></i>
                     </button>
                </div>
                <img src='assets/images/heroImage.png' alt="HeroImage"
-                    class="object-cover absolute bottom-0 lg:bottom-32 pointer-events-none" />
+                    class="object-cover absolute inset-x-0 bottom-0 pointer-events-none w-full" />
           </div>
           <!-- About -->
-          <div id="tentang-kami" class="pt-24 lg:min-h-screen lg:px-40">
-               <div class="flex flex-col relative items-center justify-center gap-y-14">
+          <div class="pt-32 sm:pt-40 sm:px-10 lg:min-h-screen lg:px-40">
+               <div class="flex flex-col relative items-center justify-center gap-y-10">
                     <h2 class="staggered text-lg xs:text-xl md:text-3xl max-w-md 
-                         font-medium text-center z-10 px-6 md:px-0">
+                         font-medium text-center z-10 px-10 md:px-0">
                          Kenapa kamu harus memilih <span class="font-bold">Eksplosa?</span>
                     </h2>
                     <!-- Cards Information -->
-                    <div class="grid grid-cols-1 px-6 md:px-0 md:grid-cols-2 gap-x-5 gap-y-6 md:gap-y-10 z-10 w-full">
+                    <div class="grid grid-cols-1 px-5 md:px-0 md:grid-cols-2 gap-x-5 gap-y-6 md:gap-y-10 z-10 w-full">
                          <div class='staggered relative bg-white border-[0.2px] border-graySurface/50 
                          w-full h-auto rounded-3xl shadow-md overflow-hidden px-8 pt-8 pb-10 
-                         xs:px-10 xs:pb-12 md:h-80 md:py-12 '>
+                         xs:px-10 xs:pb-12 lg:h-80 lg:py-12'>
                               <div class='space-y-2 md:space-y-3'>
                                    <div
                                         class='bg-blueAccent rounded-md size-12 xs:size-14 flex items-center justify-center'>
@@ -128,7 +133,7 @@
                                         </h1>
                                    </div>
                                    <h1
-                                        class='text-xl xs:text-2xl md:text-3xl font-medium md:font-semibold text-primary'>
+                                        class='text-xl xs:text-2xl lg:text-3xl font-medium md:font-semibold text-primary'>
                                         980,870
                                         <span class='text-darkText ml-2'>Pengguna</span>
                                    </h1>
@@ -145,7 +150,7 @@
                          </div>
                          <div class='staggered relative bg-white border-[0.2px] border-graySurface/50 
                          w-full h-auto rounded-3xl shadow-md overflow-hidden px-8 pt-8 pb-10 
-                         xs:px-10 xs:pb-12 md:h-80 md:py-12 '>
+                         xs:px-10 xs:pb-12 lg:h-80 lg:py-12'>
                               <div class='space-y-2 md:space-y-3'>
                                    <div
                                         class='bg-blueAccent rounded-md size-12 xs:size-14 flex items-center justify-center'>
@@ -154,7 +159,7 @@
                                         </h1>
                                    </div>
                                    <h1
-                                        class='text-xl xs:text-2xl md:text-3xl font-medium md:font-semibold text-primary'>
+                                        class='text-xl xs:text-2xl lg:text-3xl font-medium md:font-semibold text-primary'>
                                         340
                                         <span class='text-darkText ml-2'>Bahasa</span>
                                    </h1>
@@ -172,7 +177,7 @@
                          </div>
                          <div class='staggered relative bg-white border-[0.2px] border-graySurface/50 
                          w-full h-auto rounded-3xl shadow-md overflow-hidden px-8 pt-8 pb-10 
-                         xs:px-10 xs:pb-12 md:h-80 md:py-12 '>
+                         xs:px-10 xs:pb-12 lg:h-80 lg:py-12'>
                               <div class='space-y-2 md:space-y-3'>
                                    <div
                                         class='bg-blueAccent rounded-md size-12 xs:size-14 flex items-center justify-center'>
@@ -181,7 +186,7 @@
                                         </h1>
                                    </div>
                                    <h1
-                                        class='text-xl xs:text-2xl md:text-3xl font-medium md:font-semibold text-primary'>
+                                        class='text-xl xs:text-2xl lg:text-3xl font-medium md:font-semibold text-primary'>
                                         Fitur
                                         <span class='text-darkText ml-2'>Eksplorasi</span>
                                    </h1>
@@ -191,7 +196,9 @@
                                         setiap bahasa, pelajari lebih lanjut, dan jadilah bagian dari upaya
                                         pelestarian yang berarti.
                                    </p>
-                                   <h5 class='text-primary font-medium text-sm'>Coba Fitur&gt;&gt;</h5>
+                                   <button data-target="mapPage">
+                                        <h5 class='text-primary font-medium text-sm'>Coba Fitur&gt;&gt;</h5>
+                                   </button>
                               </div>
                               <img src='assets/images/batik/batikBlue.png' alt="batikBlue"
                                    class='absolute right-5 top-0 size-40 object-contain' />
@@ -200,7 +207,7 @@
                          </div>
                          <div class='staggered relative bg-white border-[0.2px] border-graySurface/50 
                               w-full h-auto rounded-3xl shadow-md overflow-hidden px-8 pt-8 
-                              pb-10 xs:px-10 xs:pb-12 md:h-80 md:py-12 '>
+                              pb-10 xs:px-10 xs:pb-12 lg:h-80 lg:py-12'>
                               <div class='space-y-2 md:space-y-3'>
                                    <div
                                         class='bg-blueAccent rounded-md size-12 xs:size-14 flex items-center justify-center'>
@@ -209,7 +216,7 @@
                                         </h1>
                                    </div>
                                    <h1
-                                        class='text-xl xs:text-2xl md:text-3xl font-medium md:font-semibold text-primary'>
+                                        class='text-xl xs:text-2xl lg:text-3xl font-medium md:font-semibold text-primary'>
                                         Quiz
                                         <span class='text-darkText ml-2'>Belajar Interaktif</span>
                                    </h1>
@@ -219,7 +226,9 @@
                                         budaya daerah, serta memperdalam pemahaman dengan setiap kuis yang kamu
                                         selesaikan.
                                    </p>
-                                   <h5 class='text-primary font-medium text-sm'>Coba Fitur&gt;&gt;</h5>
+                                   <button data-target="provincePage">
+                                        <h5 class='text-primary font-medium text-sm'>Coba Fitur&gt;&gt;</h5>
+                                   </button>
                               </div>
                               <img src='assets/images/batik/batikBlue.png' alt="batikBlue"
                                    class='absolute right-5 top-0 size-40 object-contain' />
@@ -230,8 +239,8 @@
                </div>
           </div>
           <!-- Popular Language -->
-          <div class="mt-24 lg:mt-40 min-h-[25rem] py-5 lg:min-h-[80vh] lg:py-20 bg-primary relative">
-               <div class="px-6 lg:px-40 flex flex-col items-center justify-center gap-y-10">
+          <div class="mt-24 lg:mt-40 min-h-[25rem] py-5 lg:min-h-[80vh] lg:py-20 bg-primary relative z-30">
+               <div class="px-5 lg:px-40 flex flex-col items-center justify-center gap-y-10">
                     <div class='text-center'>
                          <h2 class="animate fadeToBottom text-xl md:text-3xl text-white font-bold">
                               Bahasa Daerah Terpopuler
@@ -245,68 +254,78 @@
                          <div class="carousel-wrapper w-full">
                               <div class="carousel-slides items-center justify-start">
                                    <div class="staggered carousel-slide bg-white rounded-tr-2xl rounded-b-2xl 
-                                   w-full pt-2 pb-6 md:h-60 shadow-xl md:shadow-black/30">
+                                   w-full pt-2 pb-6 md:h-48 lg:h-60 shadow-xl md:shadow-black/30">
                                         <img src="assets/images/languages/jawa.png" alt=""
-                                             class="object-cover object-center pointer-events-none select-none">
-                                        <div
-                                             class="flex items-center md:items-start justify-center gap-x-2 w-full h-full">
+                                             class="object-cover object-center pointer-events-none select-none w-full">
+                                        <div class="flex items-center px-5 lg:px-0 md:items-start justify-center 
+                                        gap-x-2 w-full h-full">
                                              <div
                                                   class="bg-secondary/20 rounded-full size-5 flex items-center justify-center">
-                                                  <span class="text-secondary text-sm">1</span>
+                                                  <span class="text-secondary text-[14px] lg:text-sm">1</span>
                                              </div>
-                                             <h3 class="text-secondary font-medium text-sm">Bahasa Jawa</h3>
+                                             <h3 class="text-secondary font-medium text-[14px] lg:text-sm">
+                                                  Bahasa Jawa
+                                             </h3>
                                         </div>
                                    </div>
                                    <div class="staggered carousel-slide bg-white rounded-tr-2xl rounded-b-2xl 
-                                   w-full pt-2 pb-6 md:h-60 shadow-xl md:shadow-black/30">
+                                   w-full pt-2 pb-6 md:h-48 lg:h-60 shadow-xl md:shadow-black/30">
                                         <img src="assets/images/languages/madura.png" alt=""
-                                             class="object-cover object-center pointer-events-none select-none">
-                                        <div
-                                             class="flex items-center md:items-start justify-center gap-x-2 w-full h-full">
+                                             class="object-cover object-center pointer-events-none select-none w-full">
+                                        <div class="flex items-center md:items-start px-5 
+                                             lg:px-0 justify-center gap-x-2 w-full h-full">
                                              <div
                                                   class="bg-secondary/20 rounded-full size-5 flex items-center justify-center">
-                                                  <span class="text-secondary text-sm">2</span>
+                                                  <span class="text-secondary text-[14px] lg:text-sm">2</span>
                                              </div>
-                                             <h3 class="text-secondary font-medium text-sm">Bahasa Madura</h3>
+                                             <h3 class="text-secondary font-medium text-[14px] lg:text-sm">
+                                                  Bahasa Madura
+                                             </h3>
                                         </div>
                                    </div>
                                    <div class="staggered carousel-slide bg-white rounded-tr-2xl rounded-b-2xl
-                                   w-full pt-2 pb-6 md:h-60 shadow-xl md:shadow-black/30">
+                                   w-full pt-2 pb-6 md:h-48 lg:h-60 shadow-xl md:shadow-black/30">
                                         <img src="assets/images/languages/sunda.png" alt=""
-                                             class="object-cover object-center pointer-events-none select-none">
-                                        <div
-                                             class="flex items-center md:items-start justify-center gap-x-2 w-full h-full">
+                                             class="object-cover object-center pointer-events-none select-none w-full">
+                                        <div class="flex items-center md:items-start 
+                                             px-5 lg:px-0 justify-center gap-x-2 w-full h-full">
                                              <div
                                                   class="bg-secondary/20 rounded-full size-5 flex items-center justify-center">
-                                                  <span class="text-secondary text-sm">3</span>
+                                                  <span class="text-secondary text-[14px] lg:text-sm">3</span>
                                              </div>
-                                             <h3 class="text-secondary font-medium text-sm">Bahasa Sunda</h3>
+                                             <h3 class="text-secondary font-medium text-[14px] lg:text-sm">
+                                                  Bahasa Sunda
+                                             </h3>
                                         </div>
                                    </div>
                                    <div class="staggered carousel-slide bg-white rounded-tr-2xl rounded-b-2xl
-                                   w-full pt-2 pb-6 md:h-60 shadow-xl md:shadow-black/30">
+                                   w-full pt-2 pb-6 md:h-48 lg:h-60 shadow-xl md:shadow-black/30">
                                         <img src="assets/images/languages/bali.png" alt=""
-                                             class="object-cover object-center pointer-events-none select-none">
-                                        <div
-                                             class="flex items-center md:items-start justify-center gap-x-2 w-full h-full">
+                                             class="object-cover object-center pointer-events-none select-none w-full">
+                                        <div class="flex items-center md:items-start justify-center 
+                                             px-5 lg:px-0 gap-x-2 w-full h-full">
                                              <div
                                                   class="bg-secondary/20 rounded-full size-5 flex items-center justify-center">
-                                                  <span class="text-secondary text-sm">4</span>
+                                                  <span class="text-secondary ">4</span>
                                              </div>
-                                             <h3 class="text-secondary font-medium text-sm">Bahasa Bali</h3>
+                                             <h3 class="text-secondary font-medium text-[14px] lg:text-sm">
+                                                  Bahasa Bali
+                                             </h3>
                                         </div>
                                    </div>
                                    <div class="staggered carousel-slide bg-white rounded-tr-2xl rounded-b-2xl
-                                   w-full pt-2 pb-6 md:h-60 shadow-xl md:shadow-black/30">
+                                   w-full pt-2 pb-6 md:h-48 lg:h-60 shadow-xl md:shadow-black/30">
                                         <img src="assets/images/languages/sumatera.png" alt=""
-                                             class="object-cover object-center pointer-events-none select-none">
-                                        <div
-                                             class="flex items-center md:items-start justify-center gap-x-2 w-full h-full">
+                                             class="object-cover object-center pointer-events-none select-none w-full">
+                                        <div class="flex items-center md:items-start justify-center 
+                                             px-5 lg:px-0 gap-x-2 w-full h-full">
                                              <div
                                                   class="bg-secondary/20 rounded-full size-5 flex items-center justify-center">
-                                                  <span class="text-secondary text-sm">5</span>
+                                                  <span class="text-secondary text-[14px] lg:text-sm">5</span>
                                              </div>
-                                             <h3 class="text-secondary font-medium text-sm">Bahasa Sumatera</h3>
+                                             <h3 class="text-secondary font-medium text-[14px] lg:text-sm">
+                                                  Bahasa Sumatera
+                                             </h3>
                                         </div>
                                    </div>
                               </div>
@@ -324,32 +343,36 @@
                     class="size-40 object-contain md:size-56 absolute bottom-0 right-60 md:bottom-5 md:right-5">
           </div>
           <!-- Explore -->
-          <div class="mt-20 gap-x-24 flex flex-col px-6 gap-y-10 
-               md:px-14 md:flex-row md:mt-40 md:items-start md:justify-center">
-               <div class="space-y-3 md:w-1/2 md:space-y-5">
-                    <h1 class="animate fadeToRight text-xl md:text-[40px] font-medium leading-normal">
+          <div id="tentang-kami" class="mt-20 flex flex-col px-5 gap-10 md:px-10 md:flex-row 
+          md:mt-20 md:items-center md:justify-between lg:gap-x-16 lg:px-14">
+               <div class="space-y-3 lg:w-1/2">
+                    <h1 class="animate fadeToRight text-xl font-medium lg:text-[40px] leading-normal">
                          Pelajari Lebih Lanjut Tentang <span class="font-bold">Eksplosa!</span>
                     </h1>
-                    <p class="animate fadeToTop text-sm lg:max-w-[30rem]">
+                    <p class="animate fadeToTop text-sm lg:text-base md:max-w-[40rem] lg:max-w-[30rem]">
                          Pelajari lebih lanjut tentang Eksplosa, platform yang menghubungkan Anda dengan kekayaan bahasa
                          dan budaya Indonesia. Bergabunglah bersama ribuan pengguna aktif yang turut serta dalam menjaga
                          warisan budaya untuk generasi mendatang!
                     </p>
                     <button class="text-white text-sm flex items-center bg-primary w-fit 
-                         pl-8 pr-4 py-3 rounded-lg md:py-2 md:text-base">
+                         pl-8 pr-4 gap-x-2 py-3 rounded-lg md:text-base">
                          Bergabung Sekarang
-                         <MdHandshake class="text-white size-7 md:size-9 ml-2" />
+                         <svg width="20" height="12" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M9.11307 4.57247C8.88557 4.79997 8.5064 4.79997 8.2789 4.57247L5.6714 1.9708L1.5589 6.07747L1.1739 5.70997C0.846185 5.38184 0.662109 4.93705 0.662109 4.4733C0.662109 4.00955 0.846185 3.56476 1.1739 3.23663L3.64724 0.763301C3.97536 0.435584 4.42015 0.251508 4.8839 0.251508C5.34765 0.251508 5.79244 0.435584 6.12057 0.763301L9.11307 3.74997C9.34057 3.97747 9.34057 4.34497 9.11307 4.57247ZM9.5214 3.3358C9.9764 3.7908 9.9764 4.53163 9.5214 4.98663C8.78057 5.72747 7.9989 5.11497 7.87057 4.98663L5.67724 2.7933L2.42807 6.04247C2.37399 6.09643 2.33109 6.16054 2.30182 6.2311C2.27254 6.30167 2.25748 6.37732 2.25748 6.45372C2.25748 6.53012 2.27254 6.60576 2.30182 6.67633C2.33109 6.7469 2.37399 6.811 2.42807 6.86497C2.65557 7.09247 3.02307 7.09247 3.2564 6.86497L5.9514 4.16997L6.36557 4.58413L3.67057 7.27913C3.61649 7.3331 3.57359 7.3972 3.54432 7.46777C3.51504 7.53834 3.49998 7.61399 3.49998 7.69038C3.49998 7.76678 3.51504 7.84243 3.54432 7.913C3.57359 7.98356 3.61649 8.04767 3.67057 8.10163C3.89807 8.32913 4.26557 8.32913 4.4989 8.10163L7.1939 5.40663L7.60807 5.8208L4.91307 8.5158C4.85906 8.56981 4.81622 8.63392 4.787 8.70448C4.75777 8.77505 4.74272 8.85067 4.74272 8.92705C4.74272 9.00343 4.75777 9.07905 4.787 9.14962C4.81622 9.22018 4.85906 9.28429 4.91307 9.3383C4.96708 9.39231 5.03119 9.43515 5.10175 9.46437C5.17231 9.4936 5.24794 9.50865 5.32432 9.50865C5.4007 9.50865 5.47632 9.4936 5.54689 9.46437C5.61745 9.43515 5.68156 9.39231 5.73557 9.3383L8.43057 6.6433L8.84474 7.05747L6.14974 9.75247C6.09573 9.80647 6.05289 9.87059 6.02366 9.94115C5.99443 10.0117 5.97939 10.0873 5.97939 10.1637C5.97939 10.2401 5.99443 10.3157 6.02366 10.3863C6.05289 10.4568 6.09573 10.521 6.14974 10.575C6.25881 10.684 6.40674 10.7453 6.56099 10.7453C6.63736 10.7453 6.71299 10.7303 6.78355 10.701C6.85412 10.6718 6.91823 10.629 6.97224 10.575L11.8256 5.70997C12.1533 5.38184 12.3374 4.93705 12.3374 4.4733C12.3374 4.00955 12.1533 3.56476 11.8256 3.23663L9.35224 0.763301C9.03015 0.441552 8.59538 0.257935 8.14017 0.251401C7.68495 0.244867 7.24509 0.415929 6.9139 0.728301L9.5214 3.3358Z"
+                                   fill="white" />
+                         </svg>
                     </button>
                </div>
                <!-- video -->
-               <div class="bg-primary w-full h-[14rem] lg:w-1/2 lg:h-[22rem] relative">
+               <div class="w-full h-[14rem] lg:w-1/2 md:h-[15rem] lg:h-[22rem]">
                     <img src='assets/images/video.png' alt="" class='size-full' />
                </div>
           </div>
           <!-- Quotes -->
-          <div class="relative mt-24 px-6 w-full md:px-16 md:mt-40 h-full">
-               <div class="absolute inset-0 flex flex-col justify-center text-center px-8 md:px-80 gap-y-5">
-                    <h5 class="text-white text-[15px] font-semibold md:tracking-wide md:text-2xl ">
+          <div class="relative mt-24 px-5 w-full md:px-16 md:mt-40 h-full">
+               <div class="absolute inset-0 flex flex-col justify-center text-center px-8 
+                    gap-y-5 md:max-w-[80vw] lg:max-w-[60vw] w-full mx-auto">
+                    <h5 class="text-white text-[15px] font-semibold md:tracking-wide md:text-xl lg:text-2xl">
                          "Melestarikan bahasa daerah adalah menjaga warisan berharga bagi anak cucu."
                     </h5>
                     <h6 class="text-white text-xs font-light">
@@ -362,16 +385,35 @@
                <img src="assets/images/batik/batikWhite.png" alt="BatikWhite"
                     class="size-40 object-contain md:size-56 absolute -top-5 left-20 md:top-10 md:left-20">
                <img src="assets/images/batik/batikWhite.png" alt="BatikWhite"
-                    class="size-40 object-contain md:size-56 absolute right-60 md:-bottom-5 md:right-20">
+                    class="size-40 object-contain md:size-56 absolute bottom-5 right-60 md:-bottom-5 md:right-20">
                <!-- bg -->
-               <div class="flex items-center h-full">
-                    <div class="bg-primary w-full h-[24rem] rounded-[3.5rem] md:h-[28rem]" />
-                    <div class="bg-primary w-full h-[24rem] rounded-[3.5rem] md:h-[28rem]" />
-                    <div class="bg-primary w-full h-[24rem] rounded-[3.5rem] md:h-[28rem]" />
+               <div class="flex items-center h-full md:hidden">
+                    <div class="bg-primary w-full h-[24rem] rounded-[3.3rem] md:h-[28rem]"></div>
+                    <div class="bg-primary w-full h-[24rem] rounded-[3.3rem] md:h-[28rem]"></div>
+                    <div class="bg-primary w-full h-[24rem] rounded-[3.3rem] md:h-[28rem]"></div>
+               </div>
+               <div class="items-center h-full hidden md:flex lg:hidden">
+                    <div class="bg-primary w-full h-[24rem] rounded-[2.8rem] md:h-[28rem]"></div>
+                    <div class="bg-primary w-full h-[24rem] rounded-[2.8rem] md:h-[28rem]"></div>
+                    <div class="bg-primary w-full h-[24rem] rounded-[2.8rem] md:h-[28rem]"></div>
+                    <div class="bg-primary w-full h-[24rem] rounded-[2.8rem] md:h-[28rem]"></div>
+                    <div class="bg-primary w-full h-[24rem] rounded-[2.8rem] md:h-[28rem]"></div>
+                    <div class="bg-primary w-full h-[24rem] rounded-[2.8rem] md:h-[28rem]"></div>
+               </div>
+               <div class="items-center h-full hidden lg:flex">
+                    <div class="bg-primary w-full h-[24rem] rounded-[3.5rem] md:h-[28rem]"></div>
+                    <div class="bg-primary w-full h-[24rem] rounded-[3.5rem] md:h-[28rem]"></div>
+                    <div class="bg-primary w-full h-[24rem] rounded-[3.5rem] md:h-[28rem]"></div>
+                    <div class="bg-primary w-full h-[24rem] rounded-[3.5rem] md:h-[28rem]"></div>
+                    <div class="bg-primary w-full h-[24rem] rounded-[3.5rem] md:h-[28rem]"></div>
+                    <div class="bg-primary w-full h-[24rem] rounded-[3.5rem] md:h-[28rem]"></div>
+                    <div class="bg-primary w-full h-[24rem] rounded-[3.5rem] md:h-[28rem]"></div>
+                    <div class="bg-primary w-full h-[24rem] rounded-[3.5rem] md:h-[28rem]"></div>
+                    <div class="bg-primary w-full h-[24rem] rounded-[3.5rem] md:h-[28rem]"></div>
                </div>
           </div>
      </section>
-     <footer class="mt-10 md:mt-20 w-full px-6 space-y-5 pb-10 md:px-16 md:h-80">
+     <footer class="mt-10 w-full px-5 space-y-5 pb-10 md:px-16 md:mt-24 md:h-80">
           <div class="flex flex-col gap-y-10 items-start pb-6 md:pb-10 border-b border-darkText 
                md:flex-row md:gap-x-24">
                <div>
