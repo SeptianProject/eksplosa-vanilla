@@ -15,15 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
      let animationController
 
      async function initalizeApp() {
-          const provinces = await apiService.getProvinces()
-          const languages = await apiService.getLanguages()
-          const levels = await apiService.getLevels()
-          const questions = await apiService.getQuestions()
-          console.log('Provinces: ', provinces)
-          console.log('Languages: ', languages)
-          console.log('Levels: ', levels)
-          console.log('Questions: ', questions)
-
           await loader.simulatedLoading()
           new NavbarController()
 
@@ -61,6 +52,16 @@ document.addEventListener('DOMContentLoaded', () => {
           if (window.location.pathname.includes('quiz')) {
                window.quizManagement = new QuizManagement()
           }
+
+
+          const provinces = await apiService.getProvinces()
+          const languages = await apiService.getLanguages()
+          const levels = await apiService.getLevels()
+          const questions = await apiService.getQuestions()
+          console.log('Provinces: ', provinces)
+          console.log('Languages: ', languages)
+          console.log('Levels: ', levels)
+          console.log('Questions: ', questions)
      }
 
      initalizeApp()
