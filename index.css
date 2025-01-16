@@ -213,3 +213,28 @@ p {
     transform: translateY(0);
   }
 }
+
+@media screen and (orientation: portrait) and (max-width: 767px) {
+  .portrait-only {
+    display: block;
+  }
+  .landscape-only {
+    display: none;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 767px) {
+  .portrait-only {
+    display: none;
+  }
+  .landscape-only {
+    display: block;
+  }
+}
+
+body.modal-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
