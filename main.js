@@ -1,10 +1,13 @@
-import { NavbarController } from "./lib/navbar.js"
-import { Carousel } from "./lib/carousel.js"
-import { ModalManagement } from "./lib/modalManagement.js"
-import { QuizManagement } from "./lib/quizManagement.js"
-import { AnimationController } from "./lib/animation.js"
 import { Loader } from "./lib/loader.js"
+import { Carousel } from "./lib/carousel.js"
+import { NavbarController } from "./lib/navbar.js"
+import { QuizManagement } from "./lib/QuizManager.js"
+import { ModalManagement } from "./lib/ModalManager.js"
+import { AnimationController } from "./lib/animation.js"
+import { ProvinceManager } from "./lib/provinceManager.js"
+import { OrientationHandler } from "./lib/orientationHandler.js"
 import { apiService } from "./services/apiService.js"
+import { DetailManager } from "./lib/DetailManager.js"
 
 document.addEventListener('DOMContentLoaded', () => {
      const modalManagement = new ModalManagement()
@@ -18,10 +21,26 @@ document.addEventListener('DOMContentLoaded', () => {
           await loader.simulatedLoading()
           new NavbarController()
 
+          const provinceManager = new ProvinceManager('provinceContainer', apiService)
+          provinceManager.init()
+
+          const detailManager = new DetailManager(apiService)
+          detailManager.init()
+
           setTimeout(() => {
                animationController = new AnimationController()
                animationController.init()
           }, 100);
+
+          const orientationHandler = new OrientationHandler({
+               requireLandscape: true,
+               restrictedPages: ['mapPage', 'provincePage', 'detailPage', 'quizPage'],
+               onOrientationChange: ({ isLandscape }) => {
+                    if (isLandscape && modalManagement.currentModal) {
+                         modalManagement.currentModal.destroy()
+                    }
+               }
+          })
 
           if (carouselContainer) {
                new Carousel(carouselContainer, {
@@ -53,15 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
                window.quizManagement = new QuizManagement()
           }
 
-
-          const provinces = await apiService.getProvinces()
-          const languages = await apiService.getLanguages()
-          const levels = await apiService.getLevels()
-          const questions = await apiService.getQuestions()
-          console.log('Provinces: ', provinces)
-          console.log('Languages: ', languages)
-          console.log('Levels: ', levels)
-          console.log('Questions: ', questions)
+          orientationHandler.init()
      }
 
      initalizeApp()
