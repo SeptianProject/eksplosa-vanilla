@@ -1,4 +1,4 @@
-import config from "../config.js"
+const BASE_URL = "https://devoted-life-94225c6364.strapiapp.com/api"
 
 class ApiService {
      constructor(baseUrl) {
@@ -35,4 +35,4 @@ class ApiService {
      }
 }
 
-export const apiService = new ApiService(config.BASE_URL)
+export const apiService = new ApiService(BASE_URL)
