@@ -23,9 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
           const provinceManager = new ProvinceManager('provinceContainer', apiService)
           provinceManager.init()
-
-          const detailManager = new DetailManager(apiService)
-          detailManager.init()
+          if (window.location.pathname.includes('detail')) {
+               const detailManager = new DetailManager(apiService)
+               detailManager.init()
+          }
 
           setTimeout(() => {
                animationController = new AnimationController()
