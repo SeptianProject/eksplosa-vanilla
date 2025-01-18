@@ -76,15 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
           }
 
           orientationHandler.init()
-
-          autoHideAddressBar()
-     }
-
-     function autoHideAddressBar() {
-          if (window.matchMedia('(display-mode: standalone)').matches) {
-               window.scrollTo(0, 0)
-               return
-          }
      }
 
      initalizeApp()
