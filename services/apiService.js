@@ -27,11 +27,11 @@ class ApiService {
      async getLanguages() {
           return this.fetchData('/bahasas')
      }
-     async getLevels() {
-          return this.fetchData('/levels')
+     async getLevels(params) {
+          return this.fetchData(`/levels?${params}`)
      }
-     async getQuestions() {
-          return this.fetchData('/soals')
+     async getQuestions(params) {
+          return this.fetchData(`/soals?${params}`)
      }
 }
 

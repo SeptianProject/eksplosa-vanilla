@@ -43,10 +43,10 @@
 <body id="quizPage" class="overflow-x-hidden">
      <section class="relative lg:min-h-screen landscape-only">
           <!-- Xbutton -->
-          <button id="closeButton" class="absolute top-10 left-20 bg-primary/30 text-primary 
-          rounded-md px-3 py-1 flex items-center justify-center hover:bg-primary/30 
-          transition-colors duration-300">
-               <i class="fa-solid fa-chevron-left text-xl md:text-3xl"></i>
+          <button id="closeButton" class="absolute top-5 left-5 bg-primary/30 text-primary 
+                    rounded-md px-3 py-1 flex items-center justify-center hover:bg-primary/30 
+                    transition-colors duration-300 sm:left-8 md:left-12 lg:top-10 lg:left-20">
+               <i class="fa-solid fa-chevron-left text-xl lg:text-3xl"></i>
           </button>
           <div class="flex items-center">
                <!-- Quiz question -->
@@ -73,76 +73,13 @@
                               Tingkatkan Skill-mu di Setiap Level!
                          </p>
                     </div>
-                    <!-- Level button -->
-                    <div class="flex flex-col gap-y-5">
-                         <div data-modal-action data-level="1A" class="flex items-center gap-x-2 w-fit cursor-pointer">
-                              <h5 class="rounded-full size-11 text-white text-sm font-semibold 
-                                   flex items-center justify-center">
-                                   1
-                              </h5>
-                              <h5 class="text-sm font-semibold max-w-[12rem]">
-                                   Bagian 1A - Percakapan sehari hari
-                              </h5>
-                         </div>
-                         <div data-modal-action data-level="2A" class="flex items-center gap-x-2 w-fit cursor-pointer">
-                              <h5 class="rounded-full size-11 text-white text-sm font-semibold 
-                                   flex items-center justify-center">
-                                   2
-                              </h5>
-                              <h5 class="text-sm font-semibold max-w-[12rem]">
-                                   Bagian 2A - Percakapan sehari hari
-                              </h5>
-                         </div>
-                         <div data-modal-action data-level="3A" class="flex items-center gap-x-2 w-fit cursor-pointer">
-                              <h5 class="rounded-full size-11 text-white text-sm font-semibold 
-                                   flex items-center justify-center">
-                                   3
-                              </h5>
-                              <h5 class="text-sm font-semibold max-w-[12rem]">
-                                   Bagian 3A - Percakapan sehari hari
-                              </h5>
-                         </div>
-                         <div data-modal-action data-level="4A" class="flex items-center gap-x-2 w-fit cursor-pointer">
-                              <h5 class="rounded-full size-11 text-white text-sm font-semibold 
-                                   flex items-center justify-center">
-                                   4
-                              </h5>
-                              <h5 class="text-sm font-semibold max-w-[12rem]">
-                                   Bagian 4A - Percakapan sehari hari
-                              </h5>
-                         </div>
-                         <div data-modal-action data-level="5A" class="flex items-center gap-x-2 w-fit cursor-pointer">
-                              <h5 class="rounded-full size-11 text-white text-sm font-semibold 
-                                   flex items-center justify-center">
-                                   5
-                              </h5>
-                              <h5 class="text-sm font-semibold max-w-[12rem]">
-                                   Bagian 5A - Percakapan sehari hari
-                              </h5>
-                         </div>
+                    <!-- Levels -->
+                    <div class="level-container flex flex-col gap-y-5">
+                         <!-- Level content -->
                     </div>
                     <div class="border-t border-primary">
-                         <div class="flex items-center justify-center gap-x-2 pt-3">
-                              <button class="bg-blueAccent size-10 text-primary rounded-md p-1 flex items-center 
-                         justify-center hover:bg-primary/30 transition-colors duration-300">
-                                   1
-                              </button>
-                              <button class="bg-blueAccent size-10 text-primary rounded-md p-1 flex items-center 
-                         justify-center hover:bg-primary/30 transition-colors duration-300">
-                                   2
-                              </button>
-                              <button class="bg-blueAccent size-10 text-primary rounded-md p-1 flex items-center 
-                         justify-center hover:bg-primary/30 transition-colors duration-300">
-                                   3
-                              </button>
-                              <button class="bg-blueAccent size-10 text-primary rounded-md p-1 flex items-center 
-                         justify-center hover:bg-primary/30 transition-colors duration-300">
-                                   4
-                              </button>
-                              <button class="bg-blueAccent size-10 text-primary rounded-md p-1 flex items-center 
-                         justify-center hover:bg-primary/30 transition-colors duration-300">
-                                   5
-                              </button>
+                         <div class="level-session flex items-center justify-center gap-x-2 pt-3">
+                              <!-- level session -->
                          </div>
                     </div>
                </div>

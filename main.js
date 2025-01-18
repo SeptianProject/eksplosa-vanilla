@@ -1,13 +1,13 @@
 import { Loader } from "./lib/loader.js"
 import { Carousel } from "./lib/carousel.js"
 import { NavbarController } from "./lib/navbar.js"
-import { QuizManagement } from "./lib/QuizManager.js"
 import { DetailManager } from "./lib/DetailManager.js"
 import { ModalManagement } from "./lib/ModalManager.js"
 import { AnimationController } from "./lib/animation.js"
 import { ProvinceManager } from "./lib/ProvinceManager.js"
 import { OrientationHandler } from "./lib/orientationHandler.js"
 import { apiService } from "./services/apiService.js"
+import { QuizSystemManager } from "./lib/QuizManager.js"
 
 document.addEventListener('DOMContentLoaded', () => {
      const modalManagement = new ModalManagement()
@@ -28,6 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
                detailManager.init()
           }
 
+          if (window.location.pathname.includes('quiz')) {
+               const quizSystem = new QuizSystemManager(apiService)
+               quizSystem.init()
+          }
+
+
           setTimeout(() => {
                animationController = new AnimationController()
                animationController.init()
@@ -35,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
           const orientationHandler = new OrientationHandler({
                requireLandscape: true,
-               restrictedPages: ['mapPage', 'provincePage', 'detailPage', 'quizPage'],
+               restrictedPages: ['provincePage', 'detailPage', 'quizPage'],
                onOrientationChange: ({ isLandscape }) => {
                     if (isLandscape && modalManagement.currentModal) {
                          modalManagement.currentModal.destroy()
@@ -67,10 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
           if (window.location.pathname.includes('map')) {
                modalManagement.showMapModal()
-          }
-
-          if (window.location.pathname.includes('quiz')) {
-               window.quizManagement = new QuizManagement()
           }
 
           orientationHandler.init()
