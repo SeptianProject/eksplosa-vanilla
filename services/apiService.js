@@ -22,7 +22,7 @@ class ApiService {
      }
 
      async getProvinces() {
-          return await this.fetchData('/provinsis')
+          return await this.fetchData('/provinsis?sort=nama:asc')
      }
      async getLanguages() {
           return this.fetchData('/bahasas')

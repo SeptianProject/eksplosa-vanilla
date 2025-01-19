@@ -15,11 +15,17 @@ document.addEventListener('DOMContentLoaded', () => {
      const loginButton = document.querySelector('[data-login-button]')
      const carouselContainer = document.querySelector('.carousel-container')
      const loader = new Loader()
-     let animationController
 
      async function initalizeApp() {
           await loader.simulatedLoading()
           new NavbarController()
+
+          const animations = new AnimationController({
+               treshold: 0.1,
+               rootMargin: '30px'
+          })
+
+          animations.init()
 
           const provinceManager = new ProvinceManager('provinceContainer', apiService)
           provinceManager.init()
@@ -32,12 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
                const quizSystem = new QuizSystemManager(apiService)
                quizSystem.init()
           }
-
-
-          setTimeout(() => {
-               animationController = new AnimationController()
-               animationController.init()
-          }, 100);
 
           const orientationHandler = new OrientationHandler({
                requireLandscape: true,
