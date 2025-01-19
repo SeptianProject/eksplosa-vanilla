@@ -34,3 +34,9 @@
 - **Source**: Pinterest
   - `assets/images/batik/batikBlue.png`
   - `assets/images/batik/batikWhite.png`
+
+### etc
+
+- **Source**: Pinterest
+  - `assets/images/cardIlustrasi.jpg`
+  - `assets/images/heroImage.png`
