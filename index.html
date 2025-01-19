@@ -48,7 +48,7 @@
                <div class="flex items-center justify-between w-full pl-5 pr-10 py-4 z-10 bg-white 
                sm:pl-10 sm:pr-14 md:p-0 md:w-auto md:bg-transparent">
                     <!-- Logo -->
-                    <img src="assets/images/logo.png" alt="Logo" class="scale-90 z-50">
+                    <img src="assets/images/eksplosa-logo.png" alt="Logo" class="h-12 sm:h-14 md:h-16 z-50">
                     <!-- Hamburger menu -->
                     <button id="hamburger-button" class="md:hidden w-6 z-50 space-y-1">
                          <div id="hamburger-1" class="w-6 h-[3px] bg-primary rounded-full transition-all duration-500">
@@ -422,31 +422,42 @@
                </div>
           </div>
      </section>
-     <footer class="mt-10 w-full px-5 space-y-5 pb-10 md:px-16 md:mt-24 md:h-80">
-          <div class="flex flex-col gap-y-10 items-start pb-6 md:pb-10 border-b border-darkText 
-               md:flex-row md:gap-x-24">
+     <footer class="mt-10 w-full px-5 space-y-5 pb-10 sm:px-16 sm:mt-24 sm:h-80">
+          <div class="flex flex-col gap-y-10 items-start pb-6 sm:pb-10 border-b border-darkText 
+               sm:flex-row sm:gap-x-24">
                <div>
-                    <img src='assets/images/logo.png' alt="Logo" class="w-44 md:w-40" />
+                    <img src='assets/images/eksplosa-logo.png' alt="Logo" class="w-40 lg:w-60" />
                </div>
                <div class="flex gap-x-20 w-full">
-                    <div class="flex flex-col gap-y-5 md:gap-y-4">
+                    <div class="flex flex-col gap-y-5 sm:gap-y-4">
                          <h5 class="font-bold">
                               Eksplosa
                          </h5>
-                         <div class="flex flex-col gap-y-3 md:gap-y-4">
-                              <a href="" class="text-[12px] text-darkText/90 md:text-base">Beranda</a>
-                              <a href="" class="text-[12px] text-darkText/90 md:text-base">Tentang Kami</a>
-                              <a href="" class="text-[12px] text-darkText/90 md:text-base">Peta</a>
-                              <a href="" class="text-[12px] text-darkText/90 md:text-base">Quiz</a>
+                         <div class="flex flex-col gap-y-3 sm:gap-y-4">
+                              <a data-target="#beranda"
+                                   class="cursor-pointer text-[12px] text-darkText/90 sm:text-base">
+                                   Beranda
+                              </a>
+                              <a data-target="#tentang-kami"
+                                   class="cursor-pointer text-[12px] text-darkText/90 sm:text-base">
+                                   Tentang Kami
+                              </a>
+                              <a data-target="mapPage" class="cursor-pointer text-[12px] text-darkText/90 sm:text-base">
+                                   Peta
+                              </a>
+                              <a data-target="provincePage"
+                                   class="cursor-pointer text-[12px] text-darkText/90 sm:text-base">
+                                   Quiz
+                              </a>
                          </div>
                     </div>
-                    <div class="flex flex-col gap-y-5 md:gap-y-4">
+                    <div class="flex flex-col gap-y-5 sm:gap-y-4">
                          <h5 class="font-bold">
                               Hubungi Kami
                          </h5>
-                         <div class="flex flex-col gap-y-3 md:gap-y-4">
-                              <a href="" class="text-[12px] text-darkText/90 md:text-base">eksplosa@gmail.com</a>
-                              <a href="" class="text-[12px] text-darkText/90 md:text-base">+62345678910</a>
+                         <div class="flex flex-col gap-y-3 sm:gap-y-4">
+                              <a href="" class="text-[12px] text-darkText/90 sm:text-base">eksplosa@gmail.com</a>
+                              <a href="" class="text-[12px] text-darkText/90 sm:text-base">+62345678910</a>
                          </div>
                     </div>
                </div>

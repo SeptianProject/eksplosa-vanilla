@@ -5,7 +5,7 @@
 ### Logo
 
 - **Source**: Logomaker
-  - `assets/images/logo.png`
+  - `assets/images/eksplosa-logo.png`
 
 ### Map
 
