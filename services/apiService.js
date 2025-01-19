@@ -21,8 +21,11 @@ class ApiService {
           }
      }
 
-     async getProvinces() {
-          return await this.fetchData('/provinsis?sort=nama:asc')
+     async getProvinces(includeFunFacts = false) {
+          const endpoint = includeFunFacts
+               ? 'populate[fakta_menariks][populate]=*'
+               : 'populate[bahasas][populate]=*'
+          return await this.fetchData(`/provinsis?sort=nama:asc&${endpoint}`)
      }
      async getLanguages() {
           return this.fetchData('/bahasas')
