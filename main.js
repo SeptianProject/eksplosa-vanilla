@@ -12,7 +12,7 @@ import { QuizSystemManager } from "./lib/QuizManager.js"
 document.addEventListener('DOMContentLoaded', () => {
      const modalManagement = new ModalManagement()
      const closeButton = document.getElementById('closeButton')
-     const loginButton = document.querySelector('[data-login-button]')
+     const loginButton = document.querySelectorAll('[data-login-button]')
      const carouselContainer = document.querySelector('.carousel-container')
      const loader = new Loader()
 
@@ -64,7 +64,11 @@ document.addEventListener('DOMContentLoaded', () => {
           }
 
           if (loginButton) {
-               loginButton.addEventListener('click', () => modalManagement.showAuthModal())
+               loginButton.forEach(button => {
+                    button.addEventListener('click', () => {
+                         modalManagement.showAuthModal()
+                    })
+               })
           }
 
           if (closeButton) {
