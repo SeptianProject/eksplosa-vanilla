@@ -1,4 +1,4 @@
-const BASE_URL = "https://devoted-life-94225c6364.strapiapp.com/api"
+const BASE_URL = "https://special-connection-7298fdbd7e.strapiapp.com/api"
 
 class ApiService {
      constructor(baseUrl) {
