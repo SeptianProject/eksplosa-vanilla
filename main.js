@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     },
                     slideGap: {
                          mobile: 25,
-                         desktop: 10
+                         desktop: 20
                     },
                     transitionDuration: 300
                })
