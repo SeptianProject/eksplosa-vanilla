@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
      const loader = new Loader()
 
      async function initalizeApp() {
-          await loader.simulatedLoading()
+          // await loader.simulatedLoading()
           new NavbarController()
 
           const animations = new AnimationController({
